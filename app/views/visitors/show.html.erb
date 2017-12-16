@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @visitor.created_at %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @visitor.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @visitor.company %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @visitor.purpose %>
+</p>
+
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>
