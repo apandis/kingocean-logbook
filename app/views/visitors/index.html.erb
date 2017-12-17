@@ -1,11 +1,13 @@
+<div class="row mt-3 mb-3 align-items-center">
+  <div class="col-auto mr-auto">
+    <h1>Visitors Log</h1>
+  </div>
+  <div class="col-auto">
+    <%= link_to 'New Visitor', new_visitor_path, class: 'btn btn-success' %>
+  </div>
+</div>
 <div class="row">
-  <div class="col-sm-12">
-    <p id="notice"><%= notice %></p>
-  </div>
-  <div class="col-sm-12">
-    <h1 class="mb-3 mt-3">Visitors Log</h1>
-  </div>
-  <div class="col-sm-12">
+    <div class="col-sm-12">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -31,10 +33,5 @@
         <% end %>
       </tbody>
     </table>
-  </div>
-
-  <br>
-  <div class="col-sm-12">
-  <%= link_to 'New Visitor', new_visitor_path, class: 'btn btn-success' %>
   </div>
 </div>
