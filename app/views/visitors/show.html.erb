@@ -1,24 +1,30 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @visitor.created_at %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @visitor.name %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @visitor.company %>
-</p>
-
-<p>
-  <strong>Purpose:</strong>
-  <%= @visitor.purpose %>
-</p>
-
-<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
-<%= link_to 'Back', visitors_path %>
+<div class="row">
+  <div class="col-sm">
+    <div class="card text-center">
+      <div class="card-header">
+        <strong>VISITOR</strong>
+      </div>
+      <div class="card-body">
+        <h3>
+          <%= @visitor.name %>
+        </h3>
+        <p>
+          <%= @visitor.company %>
+        </p>
+        <p>
+          <%= @visitor.created_at.strftime("%d/%m/%Y %H:%M") %>
+        </p>
+      </div>
+      <div class="card-footer">
+        <strong>KING OCEAN</strong>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm text-center mb-3 mt-3">
+    <%= link_to 'Edit', edit_visitor_path(@visitor), class: "btn btn-info btn-sm d-print-none
+" %>
+    <%= link_to 'Back', visitors_path, class: 'btn btn-primary btn-sm d-print-none
+' %>
+  </div>
+</div>
