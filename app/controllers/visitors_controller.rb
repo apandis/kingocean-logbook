@@ -14,7 +14,7 @@ class VisitorsController < ApplicationController
   scope :last_year, -> { where(:created_at => 1.years.ago.beginning_of_year..1.years.ago.end_of_year) }
 
   def index
-    @visitors = Visitor.all
+    @visitors = Visitor.today
   end
 
   def show
