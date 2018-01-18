@@ -2,7 +2,7 @@ class VisitorsController < ApplicationController
   before_action :set_visitor, only: [:show, :edit, :update, :destroy]
 
   def index
-    @visitors = Visitor.All
+    @visitors = Visitor.all
   end
 
   def show
